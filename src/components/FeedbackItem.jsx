@@ -1,8 +1,11 @@
-function FeedbackItem() {
+import { useState } from "react"
+
+function FeedbackItem({item}) {
     return (
         <div className="card">
-            <div className="num-display">10</div>
-            <div className="text-display">This is an example feedback</div>
+            <div className="num-display">{ item.rating }</div>
+            <div className="text-display">{ item.text }</div>
+            {/* <button onClick={handleClick}>Hello</button> */}
         </div>
     )
 }
