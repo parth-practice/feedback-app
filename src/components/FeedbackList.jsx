@@ -1,7 +1,7 @@
 import FeedbackItem from "./FeedbackItem";
 
-function FeedbackList({feedback}) {
-    console.log("::::", feedback);
+function FeedbackList({feedback, handleDelete}) {
+
     if (!feedback || feedback.length === 0) {
         return <p>There are no feedback!</p>;
     }
@@ -9,7 +9,7 @@ function FeedbackList({feedback}) {
     return (
         <div className="feedback-lis">
             {feedback.map((item) => (
-                <FeedbackItem key={item.id} item={item} />
+                <FeedbackItem key={item.id} item={item} handleDelete={handleDelete}/>
             ))}
         </div>
     )
